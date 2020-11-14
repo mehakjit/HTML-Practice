@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo Flexbox -CdePen</title>
+        <style>
+            body {padding: 2em;}
+
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: cyan;
+                font-weight: bold;
+                padding: 10px;
+            }
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: navajowhite;
+                font-weight: bold;
+                padding: 10px;
+            }
+            .mainCointainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+                /* background:whitesmoke; */
+            }
+            .mainContentItem{
+                text-align: left;
+                background: whitesmoke;
+            }
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: pink;
+            }
+            .sideBarLeftItem{ background: goldenrod;}
+            .sideBarRightItem{background: hotpink;}
+
+            .sideBarItem {flex: 1 3 0 ; border: 0px solid gray}
+            .mainContentItem{flex: 3 0px;}
+            .sideBarLeftItem{order: 1;}
+            .sideBarRightItem{ order: 3;}
+            .mainContentItem{order: 2;}
+        </style>
+    </head>
+    <body>
+        <header class = "headerContainer">
+        <h1>HEADER - Sample Flexbox Example</h1>
+        </header>
+        <div class="mainCointainer">
+            <section class = "mainContentItem">
+                <article>
+                    <h2>Bribery  1 : Boon</h2>
+                    <p>This serious political tract catalogues and analyzes many types of bribery and corruption. The author states that he has compiled a "compendious and imaginative headline under which he puts down his impressions and experiences gathered during a long period of research into the question of bribery and corruption, how they arose and how far they have putrefied our social system,"</p>
+                </article>
+                <article>
+                    <h2>Bribery  2 : Boon</h2>
+                    <p>This serious political tract catalogues and analyzes many types of bribery and corruption. The author states that he has compiled a "compendious and imaginative headline under which he puts down his impressions and experiences gathered during a long period of research into the question of bribery and corruption, how they arose and how far they have putrefied our social system,"</p>
+                </article>
+                <article>
+                    <h2>Bribery  3 : Boon</h2>
+                    <p>This serious political tract catalogues and analyzes many types of bribery and corruption. The author states that he has compiled a "compendious and imaginative headline under which he puts down his impressions and experiences gathered during a long period of research into the question of bribery and corruption, how they arose and how far they have putrefied our social system,"</p>
+                </article>
+            </section>
+            <section class = "sideBarItem sideBarLeftItem"><div class = "center"><p>Left Side Bar</p></div></section>
+            <section class = "sideBarItem sideBarRightItem"><div class = "center"><p>Right Side Bar</p></div></section>
+        </div>
+        <footer class="footerContainer"></footer>
+    </body>
+</html>

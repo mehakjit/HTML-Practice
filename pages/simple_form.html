@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width">
+        <title>Basic input styles</title>
+        <link rel = "stylesheet" href="../css/simple_form.css">
+    </head>
+    <body>
+        <form>
+            <header class="headerContainer">
+                <h1>HTML 5 for Input Fields</h1>
+            </header>
+            <div>
+                <label for="text">text input type for Name</label>
+                <input type="text" id="text" name="text" placeholder="Name">
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="pwd">Password Input</label>
+                <input type="password" id="pwd" name="pwd" required>
+                <!-- <error-output class="text-error" for="text"></error-output> -->
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="e-mail" id="email" name="e-maol">
+            </div>
+            <div>
+                <label for="number">number input type:</label>
+                <input type = "number" id="number" name="number" required>
+            </div>
+            <div>
+                <label for="number">Tel input type</label>
+                <input type="tel" id="tel" name="tel">
+            </div>
+            <div>
+                <label for="search">search</label>
+                <input type="search" id="search" name="search">
+            </div>
+            <div class="nativeDateTimePicker">
+                <lablel for="startDate">Choose a date and time:</lablel>
+                <input type="datetime-local" id="startDate" name="startDate">
+                <span class="validity"></span>
+            </div>
+            <div class="nativeDateTimePicker">
+                <lablel for="startDate">Choose a date and time:</lablel>
+                <input type="range" name="salary" id="salary" min="300000"
+                        max="500000" step="100" value="400000">
+                <output class="salary-output" for="salary">400000</output></output>
+            </div>
+                <button>Submit</button>
+        </form>
+        <script>
+            const text = document.querySelector('#text')
+            const textError = document.querySelector('.text-error')
+            text.addEventListener('input',function(){
+                let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$')
+                if(nameRegex.test(test.value))
+                    textError.textContent = ""
+                else textError.textContent = "Name is Incorrect"
+            })
+
+            const salary = document.querySelector('#salary')
+            const output = document.querySelector('.salary-output')
+            output.textContent=salary.value;
+            salary.addEventListener('input',function(){
+                output.textContent=salary.value;
+            })
+        </script>
+    </body>
+</html>
