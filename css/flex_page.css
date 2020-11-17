@@ -21,6 +21,16 @@
   .content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .articleItem{
+    text-align: left;
+    background: whitesmoke;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   }
   .content > article {
     flex: 3;
@@ -30,10 +40,7 @@
     background: beige;
     flex: 1;
   }
-  .articleItem{
-    text-align: left;
-    background: whitesmoke;
-  }   
+     
   .articleHeadding{
       text-align: center;
       background-color: violet;
